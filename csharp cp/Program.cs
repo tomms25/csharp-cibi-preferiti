@@ -39,7 +39,7 @@ Console.WriteLine("1° =" + listaCibiPreferiti[0]);
 
 //Classifica cibo preferito ma non troppo
 
-Console.WriteLine("9° =" + listaCibiPreferiti[8]);
+Console.WriteLine($"Il cibo preferito ma non troppo è {listaCibiPreferiti[listaCibiPreferiti.Length - 1]}");
 
 //**BONUS**
 //Stampate a video anche il cibo di mezza classifica, cioè che si trova nella posizione **mediana.** Attenzione: gestire anche il caso se aveste una classifica con un numero di elementi pari. In questo caso vanno stampati i 2 elementi in centro alla vostra classifica.
