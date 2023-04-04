@@ -20,6 +20,11 @@ Console.WriteLine("I miei cibi preferiti");
 
 string[] listaCibiPreferiti = { "Patate al forno", "Ravioli", "Pizza", "Sushi", "Polpettone", "Pasta", "Pollo arrosto", "Hamburger", "Gelato" };
 
+
+//-La lunghezza della classifica
+
+Console.WriteLine($"La classifica è composta da {listaCibiPreferiti.Length}:");
+
 //Creo il ciclo for per stampare l' array
 
 for (var i = 0; i < listaCibiPreferiti.Length; i++)
@@ -28,16 +33,25 @@ for (var i = 0; i < listaCibiPreferiti.Length; i++)
 }
 
 
-//Classifica cibi preferiti
+//Classifica cibo preferito top 
 
 Console.WriteLine("1° =" + listaCibiPreferiti[0]);
-Console.WriteLine("2° =" + listaCibiPreferiti[3]);
-Console.WriteLine("3° =" + listaCibiPreferiti[7]);
-Console.WriteLine("4° =" + listaCibiPreferiti[2]);
-Console.WriteLine("5° =" + listaCibiPreferiti[1]);
-Console.WriteLine("6° =" + listaCibiPreferiti[5]);
-Console.WriteLine("7° =" + listaCibiPreferiti[4]);
-Console.WriteLine("8° =" + listaCibiPreferiti[9]);
-Console.WriteLine("1° =" + listaCibiPreferiti[8]);
 
+//Classifica cibo preferito ma non troppo
 
+Console.WriteLine("9° =" + listaCibiPreferiti[8]);
+
+//**BONUS**
+//Stampate a video anche il cibo di mezza classifica, cioè che si trova nella posizione **mediana.** Attenzione: gestire anche il caso se aveste una classifica con un numero di elementi pari. In questo caso vanno stampati i 2 elementi in centro alla vostra classifica.
+
+if (listaCibiPreferiti.Length % 2 == 0)
+{
+    int ciboDiMezzo = listaCibiPreferiti.Length / 2;
+
+    Console.WriteLine($"Il cibo di mezza classifica è {listaCibiPreferiti[ciboDiMezzo - 1]} e {listaCibiPreferiti[ciboDiMezzo]}");
+}
+else
+{
+    int ciboDiMezzo = listaCibiPreferiti.Length / 2;
+    Console.WriteLine($"il cibo di mezzo della classifica è {listaCibiPreferiti[ciboDiMezzo]});
+}
